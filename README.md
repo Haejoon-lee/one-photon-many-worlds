@@ -10,8 +10,9 @@ It is a static site: plain HTML, CSS, and JavaScript, with no build step and no 
 
 1. Copy the repository contents (everything except `.git/`) into the target web directory, for example
    `…/<project>/` on the lab server. All paths are relative, so the site works from any folder or subfolder.
-2. Before going live, update the social-preview tags in the `<head>` of `index.html` (a comment marks the spot):
-   add `og:url`, add an approved 1200×630 `og:image`, and make `og:image` / `twitter:image` absolute URLs.
+2. The social-preview tags in the `<head>` of `index.html` (a comment marks the spot) point to the current address,
+   <https://haejoonlee.com/one-photon-many-worlds/>. If the page moves (for example to the lab site), change `og:url`
+   and `og:image` to the new absolute URLs; the card image is `public/media/images/og-image.jpg` (1200×630).
 3. Videos are H.264 `.mp4`. Most web servers already serve them correctly: `video/mp4` with range requests.
 4. The media are about 35 MB. If you push this repository over HTTPS, run
    `git config --local http.postBuffer 524288000` before the first push (a large first push can fail with HTTP 400).
