@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<!-- Project page: One Photon, Many Worlds (arXiv:2610.02675). Comments carry claim (C-/M-/F-) and asset (A-) IDs. -->
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- M-001 -->
+  <title>One Photon, Many Worlds: Posteriors and Predictions with Single-Photon Cameras</title>
+  <!-- C-001: abstract sentence, verbatim [MS p.2] -->
+  <meta name="description" content="Reconstructing a scene or inferring its properties from a single binary frame is difficult because many different images could produce the same measurement; thus, the inverse problem is fundamentally one-to-many.">
+  <meta name="theme-color" content="#18181b">
+
+  <!-- Social cards: add og:url and an approved og:image (1200×630) at deploy time (see README.md).
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="One Photon, Many Worlds: Posteriors and Predictions with Single-Photon Cameras">
+  <meta property="og:description" content="Reconstructing a scene or inferring its properties from a single binary frame is difficult because many different images could produce the same measurement; thus, the inverse problem is fundamentally one-to-many.">
+  <meta property="og:image" content="public/media/images/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  -->
+  <link rel="icon" href="data:,">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/index.css?v=2026-11-08-release">
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script defer src="static/js/index.js?v=2026-11-08-release"></script>
+</head>
+<body>
+
+<!-- ============================ Header ============================ -->
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop has-text-centered">
+      <!-- M-001; first line drawn as a simulated SPAD capture (C-038, A-037) -->
+      <h1 class="title is-1 publication-title photon-title">
+        <span class="photon-wordmark" data-text="One Photon, Many Worlds"><span class="photon-text">One Photon, Many Worlds:</span><canvas aria-hidden="true"></canvas></span>
+        <span class="publication-subtitle">Posteriors and Predictions with Single-Photon Cameras</span>
+      </h1>
+      <p class="photon-caption"><span aria-hidden="true">Title drawn as a simulated SPAD capture · <span class="photon-count">N = 0 binary frames</span></span> <button type="button" class="photon-replay" aria-label="Replay the photon animation of the title">Replay</button></p>
+      <!-- M-003, M-009 -->
+      <div class="is-size-5 publication-authors">
+        <span class="author-block"><a href="https://haejoonlee.com/" target="_blank" rel="noopener">Haejoon Lee</a><sup>1</sup>,</span>
+        <span class="author-block"><a href="https://pages.cs.wisc.edu/~mohitg/" target="_blank" rel="noopener">Mohit Gupta</a><sup>2</sup>,</span>
+        <span class="author-block"><a href="https://www.ece.cmu.edu/directory/bios/bhagavatula-vijayakumar.html" target="_blank" rel="noopener">Vijayakumar Bhagavatula</a><sup>1</sup>,</span>
+        <span class="author-block"><a href="https://users.ece.cmu.edu/~saswin/" target="_blank" rel="noopener">Aswin C. Sankaranarayanan</a><sup>1</sup></span>
+      </div>
+      <!-- M-004 -->
+      <div class="is-size-6 publication-authors">
+        <span class="author-block-institution"><sup>1</sup>Carnegie Mellon University &nbsp; <sup>2</sup>University of Wisconsin-Madison</span>
+      </div>
+      <!-- M-005 -->
+      <p class="is-size-5 publication-venue" style="margin-top: .5rem;">arXiv preprint</p>
+      <div class="publication-links" style="margin-top: 1rem;">
+        <!-- M-011 -->
+        <span class="link-block"><a href="https://arxiv.org/abs/2610.02675" target="_blank" rel="noopener" class="external-link button is-normal is-rounded is-dark"><span class="icon"><i class="fas fa-file-pdf"></i></span><span>Paper (arXiv)</span></a></span>
+        <!-- M-008 -->
+        <span class="link-block"><span class="button is-normal is-rounded is-dark is-soon" aria-disabled="true"><span class="icon"><i class="fab fa-github"></i></span><span>Code (coming soon)</span></span></span>
+        <span class="link-block"><span class="button is-normal is-rounded is-dark is-soon" aria-disabled="true"><span class="icon"><i class="fas fa-database"></i></span><span>Data (coming soon)</span></span></span>
+        <span class="link-block"><span class="button is-normal is-rounded is-dark is-soon" aria-disabled="true"><span class="icon"><i class="fab fa-youtube"></i></span><span>Video (coming soon)</span></span></span>
+        <span class="link-block"><a href="#bibtex" class="external-link button is-normal is-rounded is-dark"><span class="icon"><i class="fas fa-quote-right"></i></span><span>BibTeX</span></a></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ Teaser ============================ -->
+<section class="hero teaser">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <!-- A-001, C-031, F-001 [SLIDES #12] -->
+      <div class="media-full media-block">
+        <figure class="fig wide-2x"><div class="row-labeled"><div class="row-labels" aria-hidden="true"><span class="rl rl-meas">Measurement</span><span class="rl rl-post">Posterior samples</span><span class="rl-bracket"></span></div><a class="zoomable zoomable-video" href="public/media/videos/teaser_sunglasses_8rows.mp4" target="_blank" rel="noopener" title="Open the video with all 8 sample rows in a new tab" aria-label="Open the video with all 8 sample rows in a new tab"><video data-autoplay muted loop playsinline preload="auto" poster="public/media/posters/teaser_sunglasses.jpg" src="public/media/videos/teaser_sunglasses.mp4" width="962" height="572" aria-label="Real SPAD video of a face with sunglasses: the measurement at 0 to 1000 binary frames and images generated from it"></video></a></div></figure>
+        <p class="swipe-hint phone-only">Swipe sideways to see all columns.</p>
+        <p class="media-caption has-text-centered"><b>Real SPAD capture.</b> Each column: the measurement accumulated from <i>N</i><sub>k</sub> binary frames (<i>N</i><sub>k</sub> = 0 to 1000, left to right) and posterior samples generated by our model from it. With few frames the samples show different faces; with more frames they agree.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ Abstract ============================ -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop content">
+    <h2 class="title is-3">Abstract</h2>
+    <!-- C-001 [MS p.2] -->
+    <p class="has-text-justified">Single-photon avalanche diode (SPAD) cameras operate fundamentally differently from conventional cameras due to their photon-counting nature. Each frame produces a binary image: pixels report zero if no photons arrived during exposure, and one if one or more photons arrived. Reconstructing a scene or inferring its properties from a single binary frame is difficult because many different images could produce the same measurement; thus, the inverse problem is fundamentally one-to-many. As we gather more binary measurements, the inherent uncertainty associated with the inverse problem and any associated inference diminishes. With sufficient photon counts, photon noise becomes negligible relative to the signal mean, enabling near-deterministic scene recovery and inference. This work characterizes the transition from stochastic to near-deterministic scene understanding as photon budget increases, analyzing how the stochasticity in photon arrival affects downstream inference tasks. Technically, we develop a conditional generative framework based on a Hypergeometric frame-thinning process for accumulated binary SPAD measurements. Generative models capture the one-to-many nature of photon-starved inverse problems, enabling empirical characterization of how this ambiguity diminishes with increasing measurements and its impact on downstream tasks like character recognition, QR code decoding, and facial analysis.</p>
+  </div>
+</section>
+
+<!-- ============================ One measurement, many images ============================ -->
+<section class="section">
+  <div class="container is-max-desktop content">
+    <h2 class="title is-3">One measurement, many images</h2>
+    <!-- A-005, F-002 -->
+    <div class="media-block">
+      <figure class="fig wide-2x"><video data-autoplay muted loop playsinline preload="metadata" poster="public/media/posters/posterior_ffhq.jpg" src="public/media/videos/posterior_ffhq.mp4" width="1076" height="634" aria-label="Simulated SPAD measurement of a face and 16 posterior samples, from 0 to 10,000 binary frames"></video></figure>
+      <p class="swipe-hint phone-only">Swipe sideways to see both panels.</p>
+      <p class="media-caption"><b>Simulated.</b> SPAD measurement of an FFHQ face image (left) and 16 posterior samples generated by our model (right), as the number of binary frames grows from 0 to 10,000.<span class="credit">Face image from FFHQ (Karras et al., 2019), converted to grayscale and resized to 64 × 64.</span></p>
+    </div>
+    <!-- C-005 [MS p.2; p.3], C-003 [MS p.2], C-004 [MS p.2] -->
+    <p>A SPAD pixel reports one if one or more photons arrived during the exposure and zero otherwise, so each frame is a binary image. From a single binary frame, many different images could produce the same measurement: the inverse problem is one-to-many. As more binary frames are gathered, this uncertainty diminishes; with enough photons, recovery and inference become near-deterministic.</p>
+    <!-- C-006 [MS p.4, Eq. 6], C-035 [MS p.4, §3.3] -->
+    <p>For a deterministic denoiser trained with an L2 loss, the risk minimizer is the conditional mean, which is blurred when the conditional distribution is multimodal. We therefore treat restoration in the photon-starved regime as a conditional image generation problem.</p>
+  </div>
+</section>
+
+<!-- ============================ Method ============================ -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop content">
+    <h2 class="title is-3">Thin frames, then learn to add them back</h2>
+    <!-- A-028, C-036 [MS p.5–6, Eq. 8], F-015 -->
+    <div class="media-block">
+      <figure class="fig"><a class="zoomable" href="public/media/images/chain_step_large.png" target="_blank" rel="noopener" title="Open a larger version in a new tab"><img src="public/media/images/chain_step.png" width="1599" height="623" loading="lazy" alt="Diagram: a high-count face image, two intermediate SPAD images at N_t and N_t+1 frames linked by the hypergeometric thinning step above and the learned reverse step below, and an empty image at zero frames"></a></figure>
+      <p class="media-caption">One step of the chain. Frame thinning keeps a uniformly random <i>N</i><sub>t+1</sub> of the <i>N</i><sub>t</sub> binary frames, so each pixel's retained count is hypergeometric (top arrow); the learned reverse chain adds frames back (bottom arrow). Images are simulated SPAD measurements.<span class="credit">Face image from FFHQ (Karras et al., 2019), converted to grayscale and resized.</span></p>
+    </div>
+    <!-- C-007 [MS p.2; p.6], C-008 [MS p.6, Thm. 4.1], C-009 [MS p.6–7, Eqs. 15–18, Fig. 5], C-010 [MS p.8, §4.4] -->
+    <ol class="steps">
+      <li><b>Thin.</b> Discarding binary frames is a Markov chain with hypergeometric transitions.</li>
+      <li><b>Keep the physics.</b> Thinning preserves the Binomial marginal at the new frame count (Theorem 4.1).</li>
+      <li><b>Add frames back.</b> A latent Binomial model predicts a photon-detection probability map and samples the missing counts.</li>
+      <li><b>Few anchors.</b> Sampling runs along a short chain of anchor frame counts, with one shared pairwise model.</li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============================ Real captures ============================ -->
+<section class="section">
+  <div class="container is-max-desktop content">
+    <h2 class="title is-3">Real SPAD captures</h2>
+    <!-- C-012 [MS p.10; pp.11–12; p.13] -->
+    <p>We captured a printed digit grid and face images with a Pi Imaging 512 × 512 SPAD camera. Hot pixels are suppressed (for the digits, using a dark calibration capture); the digit grid is rectified and split into 28 × 28 patches, and the face measurements are downsized to 64 × 64.</p>
+    <!-- A-004, C-031, F-017 [SLIDES #15] -->
+    <div class="media-block">
+      <figure class="fig wide-2x"><div class="row-labeled"><div class="row-labels" aria-hidden="true"><span class="rl rl-meas">Measurement</span><span class="rl rl-post">Posterior samples</span><span class="rl-bracket"></span></div><a class="zoomable zoomable-video" href="public/media/videos/landmarks_no_sunglasses.mp4" target="_blank" rel="noopener" title="Open the video in a new tab" aria-label="Open the video in a new tab"><video data-autoplay muted loop playsinline preload="metadata" poster="public/media/posters/landmarks_no_sunglasses.jpg" src="public/media/videos/landmarks_no_sunglasses.mp4" width="962" height="572" aria-label="Real SPAD video of the same person without sunglasses, with face landmarks drawn on the generated images"></video></a></div></figure>
+      <p class="swipe-hint phone-only">Swipe sideways to see all columns.</p>
+      <p class="media-caption"><b>Real SPAD capture</b> of the same person without sunglasses (<i>N</i><sub>k</sub> = 0 to 1000 binary frames), with face landmarks drawn on each posterior sample generated by our model.</p>
+    </div>
+    <!-- A-024, C-033, F-012 [SLIDES #4–9] -->
+    <div class="media-block">
+      <div class="tabs-lite" role="tablist" aria-label="Number of frames">
+        <button type="button" role="tab" data-tab="dg-0" aria-selected="true"><i>N</i><sub>k</sub> = 0</button>
+        <button type="button" role="tab" data-tab="dg-1" aria-selected="false"><i>N</i><sub>k</sub> = 1</button>
+        <button type="button" role="tab" data-tab="dg-5" aria-selected="false"><i>N</i><sub>k</sub> = 5</button>
+        <button type="button" role="tab" data-tab="dg-20" aria-selected="false"><i>N</i><sub>k</sub> = 20</button>
+        <button type="button" role="tab" data-tab="dg-100" aria-selected="false"><i>N</i><sub>k</sub> = 100</button>
+        <button type="button" role="tab" data-tab="dg-250" aria-selected="false"><i>N</i><sub>k</sub> = 250</button>
+      </div>
+      <figure class="fig" id="dg-0"><div class="panel-labels"><span>Measurement<small><i>N</i><sub>k</sub> = 0 frames</small></span><span>Posterior sample<small>generated by our model</small></span><span>Target<small>high-count capture</small></span></div><img class="bare" src="public/media/images/digits_real_N0.jpg" width="1536" height="505" loading="lazy" alt="Real digit grid: measurement at 0 frames, one generated grid, and a high-count capture of the same grid"></figure>
+      <figure class="fig" id="dg-1" hidden><div class="panel-labels"><span>Measurement<small><i>N</i><sub>k</sub> = 1 frame</small></span><span>Posterior sample<small>generated by our model</small></span><span>Target<small>high-count capture</small></span></div><img class="bare" src="public/media/images/digits_real_N1.jpg" width="1536" height="505" loading="lazy" alt="Real digit grid: measurement at 1 frame, one generated grid, and a high-count capture of the same grid"></figure>
+      <figure class="fig" id="dg-5" hidden><div class="panel-labels"><span>Measurement<small><i>N</i><sub>k</sub> = 5 frames</small></span><span>Posterior sample<small>generated by our model</small></span><span>Target<small>high-count capture</small></span></div><img class="bare" src="public/media/images/digits_real_N5.jpg" width="1536" height="505" loading="lazy" alt="Real digit grid: measurement at 5 frames, one generated grid, and a high-count capture of the same grid"></figure>
+      <figure class="fig" id="dg-20" hidden><div class="panel-labels"><span>Measurement<small><i>N</i><sub>k</sub> = 20 frames</small></span><span>Posterior sample<small>generated by our model</small></span><span>Target<small>high-count capture</small></span></div><img class="bare" src="public/media/images/digits_real_N20.jpg" width="1536" height="505" loading="lazy" alt="Real digit grid: measurement at 20 frames, one generated grid, and a high-count capture of the same grid"></figure>
+      <figure class="fig" id="dg-100" hidden><div class="panel-labels"><span>Measurement<small><i>N</i><sub>k</sub> = 100 frames</small></span><span>Posterior sample<small>generated by our model</small></span><span>Target<small>high-count capture</small></span></div><img class="bare" src="public/media/images/digits_real_N100.jpg" width="1536" height="505" loading="lazy" alt="Real digit grid: measurement at 100 frames, one generated grid, and a high-count capture of the same grid"></figure>
+      <figure class="fig" id="dg-250" hidden><div class="panel-labels"><span>Measurement<small><i>N</i><sub>k</sub> = 250 frames</small></span><span>Posterior sample<small>generated by our model</small></span><span>Target<small>high-count capture</small></span></div><img class="bare" src="public/media/images/digits_real_N250.jpg" width="1536" height="505" loading="lazy" alt="Real digit grid: measurement at 250 frames, one generated grid, and a high-count capture of the same grid"></figure>
+      <p class="media-caption"><b>Real capture</b> of a printed digit grid at <i>N</i><sub>k</sub> binary frames. The posterior sample is one grid generated by our model from the measurement; the target is a high-count capture of the same grid.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ Stability ============================ -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop content">
+    <h2 class="title is-3">How many frames until the answer is stable?</h2>
+    <h3 class="title is-5">Posterior samples</h3>
+    <!-- A-011, A-014, A-017 (F-013); A-021 right half (F-016) -->
+    <div class="media-block">
+      <div class="tabs-lite" role="tablist" aria-label="Posterior samples per task">
+        <button type="button" role="tab" data-tab="sim-edges" aria-selected="true">Edges</button>
+        <button type="button" role="tab" data-tab="sim-digits" aria-selected="false">Digits</button>
+        <button type="button" role="tab" data-tab="sim-qr" aria-selected="false">QR codes</button>
+        <button type="button" role="tab" data-tab="real-face-right" aria-selected="false">Real face</button>
+      </div>
+      <div id="sim-edges">
+        <figure class="fig"><a class="zoomable" href="public/media/images/fig06_edges_simulated_large.png" target="_blank" rel="noopener" title="Open a larger version in a new tab"><img src="public/media/images/fig06_edges_simulated.png" width="1573" height="1282" loading="lazy" alt="Simulated edge measurements from 0 to 250 frames with generated samples, mean, and standard deviation"></a></figure>
+        <p class="media-caption"><b>Simulated.</b> Each column fixes one measurement at <i>N</i><sub>k</sub> frames, followed by generated samples, their mean, and their normalized standard deviation (<span class="vis">false color</span>). Paper Fig. 6.</p>
+      </div>
+      <div id="sim-digits" hidden>
+        <figure class="fig"><a class="zoomable" href="public/media/images/fig09_digits_simulated_large.png" target="_blank" rel="noopener" title="Open a larger version in a new tab"><img src="public/media/images/fig09_digits_simulated.png" width="1570" height="1391" loading="lazy" alt="Simulated MNIST measurements from 0 to 500 frames with generated digits, mean, and standard deviation"></a></figure>
+        <p class="media-caption"><b>Simulated.</b> Generated samples, their mean, and their standard deviation (<span class="vis">false color</span>) for fixed MNIST measurements. Paper Fig. 9.<span class="credit">Digits from MNIST.</span></p>
+      </div>
+      <div id="sim-qr" hidden>
+        <figure class="fig"><a class="zoomable" href="public/media/images/fig12_qr_simulated_large.png" target="_blank" rel="noopener" title="Open a larger version in a new tab"><img src="public/media/images/fig12_qr_simulated.png" width="1582" height="914" loading="lazy" alt="Simulated QR-code measurements from 0 to 500 frames with generated codes, mean, and standard deviation"></a></figure>
+        <p class="media-caption"><b>Simulated.</b> Multistep generation for fixed QR-code measurements: samples, mean, and standard deviation (<span class="vis">false color, each map normalized to a maximum of 1</span>). Paper Fig. 12.<span class="credit">QR codes from QR Code Dataset V2 (yasin sancar, 2025, CC BY 4.0).</span></p>
+      </div>
+      <div id="real-face-right" hidden>
+        <figure class="fig"><a class="zoomable" href="public/media/images/fig16_face_real_right_large.png" target="_blank" rel="noopener" title="Open a larger version in a new tab"><img src="public/media/images/fig16_face_real_right.png" width="1754" height="1345" loading="lazy" alt="Real SPAD capture of a face: measurements from 0 to 10,000 frames, generated samples, their mean, and standard deviation"></a></figure>
+        <p class="media-caption"><b>Real capture.</b> For each measurement of a real face (top row, <i>N</i><sub>k</sub> binary frames), images generated by our model, their mean, and their standard deviation (<span class="vis">false color</span>). In this example, face shape and pose settle with a few frames; eyes, mouth, and hair need more. Right half of paper Fig. 16.</p>
+      </div>
+    </div>
+
+    <h3 class="title is-5">Downstream checks</h3>
+    <!-- A-013, A-015, A-019, A-020 (F-014) -->
+    <div class="media-block">
+      <div class="tabs-lite" role="tablist" aria-label="Per-task metrics">
+        <button type="button" role="tab" data-tab="pl-edges" aria-selected="true">Edges</button>
+        <button type="button" role="tab" data-tab="pl-digits" aria-selected="false">Digits</button>
+        <button type="button" role="tab" data-tab="pl-faces" aria-selected="false">Face geometry</button>
+        <button type="button" role="tab" data-tab="pl-landmarks" aria-selected="false">Face landmarks</button>
+      </div>
+      <div id="pl-edges">
+        <figure class="fig"><a class="zoomable" href="public/media/images/fig08_edge_metrics_large.png" target="_blank" rel="noopener" title="Open a larger version in a new tab"><img src="public/media/images/fig08_edge_metrics.png" width="1597" height="793" loading="lazy" alt="Simulated: plots of median angle error and median bias MSE against the number of frames"></a></figure>
+        <p class="media-caption"><b>Simulated.</b> Edge prediction on generated samples against <i>N</i><sub>k</sub>; the red dotted line is performance on high-count (<i>N</i><sub>1</sub> = 10,000) images. Paper Fig. 8.</p>
+      </div>
+      <div id="pl-digits" hidden>
+        <figure class="fig"><a class="zoomable" href="public/media/images/fig10_digit_accuracy_large.png" target="_blank" rel="noopener" title="Open a larger version in a new tab"><img src="public/media/images/fig10_digit_accuracy.png" width="1598" height="910" loading="lazy" alt="Simulated: plot of average classification accuracy of generated MNIST samples against the number of frames"></a></figure>
+        <p class="media-caption"><b>Simulated.</b> Classification accuracy of generated MNIST samples against <i>N</i><sub>k</sub>. Paper Fig. 10.</p>
+      </div>
+      <div id="pl-faces" hidden>
+        <figure class="fig"><a class="zoomable" href="public/media/images/fig14_face_metrics_large.png" target="_blank" rel="noopener" title="Open a larger version in a new tab"><img src="public/media/images/fig14_face_metrics.png" width="1567" height="710" loading="lazy" alt="Simulated: plots of landmark distance by facial region and head-pose angle error against the number of frames"></a></figure>
+        <p class="media-caption"><b>Simulated.</b> MediaPipe landmarks and head pose on generated FFHQ samples, compared with those on high-count (<i>N</i><sub>1</sub> = 100,000) images: medians with the 25th–75th percentile range. Paper Fig. 14.</p>
+      </div>
+      <div id="pl-landmarks" hidden>
+        <figure class="fig"><a class="zoomable" href="public/media/images/fig15_face_landmarks_large.png" target="_blank" rel="noopener" title="Open a larger version in a new tab"><img src="public/media/images/fig15_face_landmarks.png" width="1597" height="1185" loading="lazy" alt="Raw simulated SPAD measurements of a face, mostly marked no detection, above generated samples with face landmarks drawn"></a></figure>
+        <p class="media-caption"><b>Simulated.</b> MediaPipe landmarks on generated FFHQ samples and on the raw SPAD measurements, from <i>N</i><sub>k</sub> = 1 to 10,000. Paper Fig. 15.<span class="credit">Face image from FFHQ (Karras et al., 2019), converted to grayscale and resized to 64 × 64.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ Citation ============================ -->
+<section class="section" id="bibtex">
+  <div class="container is-max-desktop content">
+    <h2 class="title is-3">Citation</h2>
+    <!-- M-006: arXiv export, verbatim -->
+<pre><code>@misc{lee2026photonworldsposteriorspredictions,
+      title={One Photon, Many Worlds: Posteriors and Predictions with Single-Photon Cameras},
+      author={Haejoon Lee and Mohit Gupta and Vijayakumar Bhagavatula and Aswin C. Sankaranarayanan},
+      year={2026},
+      eprint={2610.02675},
+      archivePrefix={arXiv},
+      primaryClass={eess.IV},
+      url={https://arxiv.org/abs/2610.02675},
+}</code></pre>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container has-text-centered is-size-7">
+    <!-- M-007, C-037 -->
+    <p>arXiv preprint arXiv:2610.02675 (2026). © the authors; distributed by arXiv under the <a href="http://arxiv.org/licenses/nonexclusive-distrib/1.0/" target="_blank" rel="noopener">arXiv non-exclusive license</a>.</p>
+    <p>Datasets shown: FFHQ (Karras et al., 2019; images converted to grayscale and resized), QR Code Dataset V2 (yasin sancar, 2025; CC BY 4.0), and MNIST.</p>
+    <p>This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank" rel="noopener">Academic Project Page Template</a>.</p>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,193 @@
+/* Project page styles for "One Photon, Many Worlds", layered on Bulma (Academic Project Page Template / Nerfies /
+   SVAF structure), from the Hi-SPAD page kit. Dark theme (zinc palette, after the Astro academic template), chosen
+   by the authors. */
+
+/* ---------- Theme tokens ---------- */
+:root {
+  --page-bg: #18181b;      /* zinc-900 */
+  --band-bg: #202024;      /* alternate section band (Bulma .hero.is-light) */
+  --surface: #27272a;      /* zinc-800: code, steps, tabs */
+  --line: #3f3f46;         /* zinc-700 */
+  --ink: #d4d4d8;          /* zinc-300: body text */
+  --ink-strong: #fafafa;   /* headings, bold */
+  --muted: #a1a1aa;
+  --caption: #b4b4bb;
+  --caption-vis: #9a9aa2;
+  --link: #bfdbfe;         /* blue-200 */
+  --link-hover: #dbeafe;
+  --btn-bg: #fafafa;       /* white pill buttons (Paper, BibTeX, coming soon) */
+  --btn-ink: #18181b;
+  --btn-hover: #e4e4e7;
+  --pill-on-bg: #fafafa;   /* selected tab, step numbers */
+  --pill-on-ink: #18181b;
+  --card-rim: #52525b;     /* white figure card */
+  --card-rim-hover: #a1a1aa;
+  --card-shadow: 0 8px 24px rgba(0, 0, 0, .45);
+  --focus-ring: rgba(191, 219, 254, .35);
+  --code-ink: #e4e4e7;
+  --footer-bg: #111113;
+  --media-w: 768px;        /* one width for all media and body text (80% of the 960 px column) */
+}
+
+/* ---------- Base ---------- */
+html { background-color: var(--page-bg); }
+body { font-family: 'Noto Sans', sans-serif; background-color: var(--page-bg); color: var(--ink); }
+/* Bulma's reset gives figure/section display:block, which beats the browser's [hidden] rule */
+[hidden] { display: none !important; }
+a { color: var(--link); }
+a:hover { color: var(--link-hover); text-decoration: underline; }
+.content, .hero.is-light { color: var(--ink); }
+.hero.is-light { background-color: var(--band-bg); }
+.title, .hero.is-light .title, .content h1, .content h2, .content h3, .content h4,
+strong, .content b { color: var(--ink-strong); }
+.title, .publication-title, .publication-authors { font-family: 'Google Sans', sans-serif; }
+
+/* ---------- Header ---------- */
+.publication-authors a { color: var(--link) !important; }
+.publication-authors a:hover { text-decoration: underline; }
+.author-block { display: inline-block; color: var(--ink); }
+.author-block-institution { display: inline-block; margin: 3px 0 6px; color: var(--ink); }
+.publication-venue { color: var(--muted); margin-left: auto; margin-right: auto; }
+.link-block a, .link-block .button { margin-top: 5px; margin-bottom: 5px; }  /* links and the non-link "coming soon" buttons */
+.button.is-dark { background-color: var(--btn-bg); color: var(--btn-ink); border-color: transparent; }
+.button.is-dark:hover, .button.is-dark:focus { background-color: var(--btn-hover); color: var(--btn-ink); }
+/* "Coming soon" buttons: visible, not clickable (no code, data, or video yet) */
+.link-block .button.is-soon { opacity: .5; cursor: default; pointer-events: none; }
+
+/* Title with a photon line: "One Photon, Many Worlds" is drawn as a simulated SPAD capture (index.js §3), the rest
+   of the title is text. Without JS (or before it runs) the first line is ordinary text; with JS the canvas replaces
+   it visually and the text stays in the <h1> for screen readers, search, and copy. Ink follows --ink-strong; pixels
+   stay square (integer CSS scale + pixelated). */
+.photon-title .photon-wordmark { display: block; }
+.photon-wordmark canvas { display: none; margin: 0 auto; image-rendering: pixelated; image-rendering: crisp-edges; }
+.photon-wordmark.is-live canvas { display: block; }
+.photon-wordmark.is-live .photon-text {
+  position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden;
+  clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; border: 0;
+}
+.publication-subtitle { display: block; font-size: 2rem; line-height: 1.25; margin-top: .5rem; }
+.photon-caption { margin: .5rem 0 .25rem; font-size: .8rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+.photon-count { white-space: nowrap; }
+.photon-replay {
+  font: inherit; color: var(--link); background: none; border: 0; padding: .2rem .4rem; min-height: 32px;
+  cursor: pointer; text-decoration: underline; text-underline-offset: 2px; position: relative; top: -2px;
+}
+.photon-replay:focus-visible { outline: 2px solid var(--focus-ring); border-radius: 4px; }
+
+/* ---------- Layout: Bulma flex-column fixes ----------
+   .hero is a flex column. Without these, a container centered with auto margins shrink-wraps its
+   content (long BibTeX lines pushed it past phone width), and min-width:auto lets wide content
+   stretch the section. Do NOT set max-width here: it would cancel .is-max-desktop's 960 px limit. */
+.hero > .container, .hero-body > .container { min-width: 0; width: 100%; }
+
+/* ---------- Consistent media sizing ----------
+   Only the teaser (.media-full) fills the 960 px column. Every other figure and video, and all headings and
+   text in body sections, share one 768 px column so edges line up. Phones/tablets: full width. */
+.section > .container.is-max-desktop { max-width: var(--media-w); }
+figure.fig, .tabs-lite, .media-caption, .swipe-hint {
+  max-width: var(--media-w); margin-left: auto; margin-right: auto;
+}
+.content figure.fig { margin-left: auto; margin-right: auto; margin-bottom: 0; } /* override Bulma .content margins */
+.media-full figure.fig, .media-full .media-caption, .media-full .swipe-hint { max-width: none; }
+figure.fig img, figure.fig video { width: 100%; height: auto; display: block; }
+figure.fig video { border-radius: 4px; background: #000; }
+.media-block { margin-bottom: 2rem; }
+
+/* Paper figures have white backgrounds. They sit on a white card with even padding, rounded corners,
+   a soft rim, and a shadow, so white never meets the page in a hard edge (Hi-SPAD author rule).
+   Trim each figure to its content edge first, so the padding is even on all sides.
+   Add class "bare" to an <img> that should not get a card (photos, dark renders). */
+figure.fig img:not(.bare) {
+  background: #fff; padding: 12px; border-radius: 12px;
+  border: 1px solid var(--card-rim);
+  box-shadow: var(--card-shadow);
+}
+figure.fig img.bare { border-radius: 4px; }
+/* Click a figure to open its high-resolution *_large.png in a new tab */
+figure.fig a.zoomable { display: block; cursor: zoom-in; border-radius: 12px; }
+figure.fig a.zoomable:hover img:not(.bare),
+figure.fig a.zoomable:focus-visible img:not(.bare) { border-color: var(--card-rim-hover); box-shadow: 0 0 0 3px var(--focus-ring), var(--card-shadow); }
+figure.fig a.zoomable:focus-visible { outline: none; }
+/* Result videos open full size too (the MP4 in the browser's own player) */
+figure.fig a.zoomable-video:hover video,
+figure.fig a.zoomable-video:focus-visible video { box-shadow: 0 0 0 3px var(--focus-ring); }
+.media-caption { font-size: .92rem; color: var(--caption); margin-top: .6rem; }
+.media-caption .vis { color: var(--caption-vis); font-style: italic; }
+/* Credits line under captions (dataset attributions required by the FFHQ and QR-dataset licenses) */
+.media-caption .credit { display: block; font-size: .82rem; color: var(--caption-vis); margin-top: .2rem; }
+
+/* Rotated row labels beside the real-capture video grids, like the paper's figures. Positions are fractions of
+   the 572 px tall crop: measurement row y = 16-111 (label centered on it, given the band above it for room), four
+   posterior-sample rows y = 130-567 (bracket spans them). */
+.row-labeled { display: grid; grid-template-columns: 1.9rem 1fr; column-gap: .35rem; align-items: stretch; }
+.row-labels { position: relative; }
+.row-labels .rl {
+  position: absolute; left: 0; right: 8px; display: flex; align-items: center; justify-content: center;
+  writing-mode: vertical-rl; transform: rotate(180deg); white-space: nowrap;
+  font: 500 .85rem/1.1 'Google Sans', sans-serif; color: var(--ink-strong);
+}
+.row-labels .rl-meas { top: .5%; height: 21.2%; }
+.row-labels .rl-post { top: 22.7%; height: 76.4%; }
+.row-labels .rl-bracket { position: absolute; right: 0; top: 22.7%; height: 76.4%; width: 5px;
+  border: 1.5px solid var(--muted); border-right: 0; border-radius: 2px 0 0 2px; }
+
+/* Labels above a multi-panel image whose panels are equal and separated by thin gaps (the real digit grids:
+   3 × 504 px panels + 2 × 12 px gaps = 1536 px, so the gap is 12/1536 = 0.78% of the width) */
+.panel-labels { display: grid; grid-template-columns: repeat(3, 1fr); column-gap: .78%; margin-bottom: .45rem;
+  text-align: center; font: 500 .95rem/1.25 'Google Sans', sans-serif; color: var(--ink-strong); }
+.panel-labels small { display: block; font: 400 .78rem/1.3 'Noto Sans', sans-serif; color: var(--muted); }
+
+/* ---------- Components ---------- */
+/* Numbered steps (method pipeline). Bulma's .content ol re-enables decimal markers, which duplicated
+   the circles on Hi-SPAD: keep the .content ol.steps override. */
+.steps { counter-reset: s; list-style: none; padding: 0; margin: 0 0 1.5rem; display: grid;
+  grid-template-columns: repeat(4, 1fr); gap: .5rem; }
+.content ol.steps { margin-left: 0; list-style: none; }
+.steps li { background: var(--surface); color: var(--ink); border-radius: 6px; padding: .75rem; font-size: .9rem; }
+.content ol.steps li + li { margin-top: 0; }
+.steps li::before { counter-increment: s; content: counter(s); display: inline-grid; place-items: center;
+  width: 1.6rem; height: 1.6rem; margin-right: .4rem; border-radius: 50%; background: var(--pill-on-bg); color: var(--pill-on-ink);
+  font-weight: 700; font-size: .85rem; }
+.content pre, pre { background-color: var(--surface); color: var(--code-ink); }
+code { background-color: var(--surface); color: var(--code-ink); }
+.content pre code { background: transparent; }
+.footer { background-color: var(--footer-bg); color: var(--muted); }
+
+/* Tabs (several views of one result) */
+.tabs-lite { display: flex; gap: .4rem; margin-bottom: .5rem; flex-wrap: wrap; }
+.tabs-lite button {
+  font: 500 .9rem 'Google Sans', sans-serif; padding: .4rem .8rem; min-height: 40px; cursor: pointer;
+  border: 1px solid var(--line); background: var(--surface); color: var(--ink); border-radius: 999px;
+}
+.tabs-lite button[aria-selected="true"] { background: var(--pill-on-bg); color: var(--pill-on-ink); border-color: var(--pill-on-bg); }
+
+/* Swipe hint for dense grids on phones (only the .phone-only variant is used; see the 480 px block) */
+.swipe-hint { display: none; font-size: .8rem; color: var(--muted); margin-top: .3rem; }
+.swipe-hint.phone-only { display: none; }
+
+/* ---------- Tablet & phone ---------- */
+@media (max-width: 768px) {
+  .steps { grid-template-columns: 1fr 1fr; }
+  figure.fig img:not(.bare) { padding: 8px; border-radius: 10px; }
+  .content .has-text-justified, .has-text-justified { text-align: left !important; }
+  .publication-title.title.is-1 { font-size: 2rem; line-height: 1.2; }
+  .publication-subtitle { font-size: 1.35rem; }
+  /* 44 px touch targets on phones (Bulma buttons are 40 px) */
+  .publication-links .button, .tabs-lite button { min-height: 44px; }
+  .photon-replay { min-height: 44px; }
+  /* Long centered captions are hard to read on phones */
+  .media-full .media-caption.has-text-centered { text-align: left !important; }
+  .row-labels .rl { font-size: .78rem; }
+}
+@media (max-width: 480px) {
+  .steps { grid-template-columns: 1fr; }
+  /* Dense grids (the video grids and the posterior animation) swipe sideways below 481 px; above that they fit */
+  figure.fig.wide-2x { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  figure.fig.wide-2x video, figure.fig.wide-2x img { width: 200%; max-width: none; }
+  figure.fig.wide-2x .row-labeled { width: 200%; }
+  figure.fig.wide-2x .row-labeled video { width: 100%; }
+  .swipe-hint.phone-only { display: block; }
+  .row-labels .rl { font-size: .72rem; }
+  .panel-labels { font-size: .8rem; }
+  .panel-labels small { font-size: .68rem; }
+}
